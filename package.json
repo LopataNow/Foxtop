@@ -1,0 +1,39 @@
+{
+  "name": "frontend",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "antd": "^3.4.0",
+    "build": "^0.1.4",
+    "firebase": "^4.12.1",
+    "flow-bin": "^0.69.0",
+    "lodash": "^4.17.5",
+    "node-less-chokidar": "^0.1.2",
+    "npm-run-all": "^4.1.2",
+    "prop-types": "^15.6.1",
+    "react": "^16.3.1",
+    "react-dom": "^16.3.1",
+    "react-google-button": "^0.5.1",
+    "react-google-maps": "^9.4.5",
+    "react-redux": "^5.0.7",
+    "react-redux-firebase": "^2.0.6",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.1.4",
+    "recompose": "^0.26.0",
+    "redux": "^3.7.2",
+    "redux-firestore": "^0.3.2",
+    "redux-thunk": "^2.2.0",
+    "styled-components": "^3.2.5"
+  },
+  "scripts": {
+    "build-css": "node-less-chokidar src/ -o src/",
+    "watch-css": "npm run build-css && node-less-chokidar src/ -o src/ --watch --recursive",
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build-js": "react-scripts build",
+    "build": "npm-run-all build-css build-js",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "flow": "flow"
+  }
+}
